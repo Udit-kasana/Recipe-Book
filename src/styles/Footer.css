@@ -1,0 +1,20 @@
+.app-footer {
+  color: var(--text-muted, #ccc);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color, #444);
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+}
+.footer-content p >strong {
+  color: var(--primary-dark);
+}
