@@ -1,5 +1,4 @@
-export function RecipeForm(Recipes) {
-
+export function RecipeForm(Recipes, onSubmit) {
   //creating recipe form
   const div = document.createElement("div");
   div.innerHTML = `
@@ -62,8 +61,10 @@ export function RecipeForm(Recipes) {
         .filter((el) => el), // remove empty items
     };
     Recipes.push(obj);
+    localStorage.setItem("recipes", JSON.stringify(Recipes));
     form.reset(); // clear the form after submission
     formModal.classList.remove("show"); // hide the modal
+    onSubmit(Recipes);
   });
 
   // Hide form

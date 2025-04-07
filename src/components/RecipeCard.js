@@ -2,7 +2,6 @@ export function RecipeCard(recipe, onView, onDelete) {
   // creating card
   const card = document.createElement("div");
   card.classList.add("recipe-card");
-
   card.innerHTML = `
     <img 
       class="recipe-image"
@@ -39,7 +38,7 @@ export function RecipeCard(recipe, onView, onDelete) {
 
   // to delete the recipe
   card.querySelector(".delete-btn").addEventListener("click", () => {
-    onDelete(recipe);
+    onDelete(recipe.title);
   });
 
   return card;
