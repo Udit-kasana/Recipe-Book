@@ -19,17 +19,9 @@ export function RecipeContainer(recipes, updateContainer) {
 
   const recipeList = div.querySelector("#recipeList");
   recipes.forEach((recipe) => {
-    const card = RecipeCard(recipe, viewRecipe, deleteRecipe);
+    const card = RecipeCard(recipe, deleteRecipe);
     recipeList.appendChild(card);
   });
-
-  function viewRecipe(recipe) {
-    const div = RecipeView(recipe);
-    document.body.appendChild(div); // ✅ Important!
-    setTimeout(() => {
-      div.classList.add("show");
-    }, 10);
-  }
 
   function deleteRecipe(title) {
     recipes = recipes.filter((recipe) => recipe.title !== title);

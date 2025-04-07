@@ -15,9 +15,54 @@ import { Footer } from "./components/Footer.js";
 
 // localStorage.clear();
 
+const defaultRecipes = [
+  {
+    title: "Spaghetti Bolognese",
+    image: "https://placehold.co/400x300?text=Spaghetti+Bolognese",
+    ingredients: [
+      "Spaghetti",
+      "Ground Beef",
+      "Tomato Sauce",
+      "Onion",
+      "Garlic",
+    ],
+    steps: [
+      "Boil spaghetti",
+      "Cook beef with onion and garlic",
+      "Add tomato sauce",
+      "Simmer until thickened",
+      "Mix with spaghetti and serve",
+    ],
+  },
+  {
+    title: "Grilled Cheese Sandwich",
+    image: "https://placehold.co/400x300?text=Grilled+Cheese",
+    ingredients: ["Bread slices", "Cheddar cheese", "Butter"],
+    steps: [
+      "Butter the bread",
+      "Place cheese between slices",
+      "Grill until golden brown on both sides",
+    ],
+  },
+  {
+    title: "Pancakes",
+    image: "https://placehold.co/400x300?text=Pancakes",
+    ingredients: ["Flour", "Eggs", "Milk", "Sugar", "Baking Powder"],
+    steps: [
+      "Mix dry ingredients",
+      "Add eggs and milk",
+      "Stir to form batter",
+      "Pour on a hot pan and flip when bubbles form",
+      "Serve with syrup",
+    ],
+  },
+];
+
 const app = document.getElementById("app");
 
-let recipes = JSON.parse(localStorage.getItem("recipes")) || [];
+localStorage.setItem("recipes", JSON.stringify(defaultRecipes));
+
+const recipes = JSON.parse(localStorage.getItem("recipes")) || [];
 
 app.appendChild(Header());
 app.appendChild(Hero(recipes));
@@ -34,23 +79,20 @@ function updatedContainer(recipes) {
   recipeList.innerHTML = "";
 
   recipes.forEach((recipe) => {
-    const card = RecipeCard(recipe, viewRecipe, deleteRecipe);
+    const card = RecipeCard(recipe, deleteRecipe);
     recipeList.appendChild(card);
   });
-
-  function viewRecipe(recipe) {
-    const div = RecipeView(recipe);
-    document.body.appendChild(div); // ✅ Important!
-    setTimeout(() => {
-      div.classList.add("show");
-    }, 10);
-  }
 
   function deleteRecipe(title) {
     recipes = recipes.filter((recipe) => recipe.title !== title);
 
     localStorage.setItem("recipes", JSON.stringify(recipes));
-    updatedContainer(recipes);
+    recipeList.innerHTML = "";
+
+    recipes.forEach((recipe) => {
+      const card = RecipeCard(recipe, deleteRecipe);
+      recipeList.appendChild(card);
+    });
     if (recipes.lenght === 0) {
       recipeList.innerHTML = `<p>Add some recipes</p>`;
     }

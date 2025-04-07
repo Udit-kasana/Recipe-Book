@@ -1,4 +1,6 @@
-export function RecipeCard(recipe, onView, onDelete) {
+import { RecipeView } from "./RecipeView.js";
+
+export function RecipeCard(recipe, onDelete) {
   // creating card
   const card = document.createElement("div");
   card.classList.add("recipe-card");
@@ -33,7 +35,11 @@ export function RecipeCard(recipe, onView, onDelete) {
 
   // to view the full width recipe
   card.querySelector(".view-btn").addEventListener("click", () => {
-    onView(recipe);
+    const div = RecipeView(recipe);
+    document.body.appendChild(div); // ✅ Important!
+    setTimeout(() => {
+      div.classList.add("show");
+    }, 10);
   });
 
   // to delete the recipe
