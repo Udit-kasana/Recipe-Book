@@ -65,7 +65,7 @@ localStorage.setItem("recipes", JSON.stringify(defaultRecipes));
 const recipes = JSON.parse(localStorage.getItem("recipes")) || [];
 
 app.appendChild(Header());
-app.appendChild(Hero(recipes));
+app.appendChild(Hero(recipes,updatedContainer));
 app.appendChild(RecipeForm(recipes, onsubmit));
 app.appendChild(RecipeContainer(recipes, updatedContainer));
 app.appendChild(Footer());
