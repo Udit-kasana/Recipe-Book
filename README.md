@@ -59,3 +59,28 @@ Recipe-Book
 
 Check out the live demo of this project: [Recipe Book](https://udit-kasana.github.io/Recipe-Book/)
 
+## Navigation Guide
+
+1. **Home Page**
+
+   ![Home Page Screenshot](images/home.png)
+
+2. **Recipes Section**
+
+   ![Recipes Section Screenshot](images/Recipes-section.png)
+
+   - Navigate to the top-right corner and click on Add to add new Recipes.
+
+   - Click on card view Button to view Full Recipe:
+   - Click on ingredients to view ingrediants and - - Click Preparstion steps to view steps
+
+   ![view recipe Screenshot](images/view-recipe.png)
+
+   - Click on delete Button to delete the recipe from local storage
+
+3. **Settings**
+
+   - Click on the Add(in header) to Add recipes.
+   - A form will appear add details and click on Add Recipe
+
+   ![Add recipe Screenshot](images/Add-recipe.png)
