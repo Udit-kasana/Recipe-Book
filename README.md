@@ -54,3 +54,8 @@ Recipe-Book
     ```
     npm install
     npm run dev
+
+## Live Demo
+
+Check out the live demo of this project: [Recipe Book](https://udit-kasana.github.io/Recipe-Book/)
+
