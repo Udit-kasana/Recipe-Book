@@ -18,7 +18,8 @@ import { Footer } from "./components/Footer.js";
 const defaultRecipes = [
   {
     title: "Spaghetti Bolognese",
-    image: "https://placehold.co/400x300?text=Spaghetti+Bolognese",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsE7D-tDUIghCwFYbbZGj_D7CUAuKz6Alu6Q&s",
     ingredients: [
       "Spaghetti",
       "Ground Beef",
@@ -36,7 +37,8 @@ const defaultRecipes = [
   },
   {
     title: "Grilled Cheese Sandwich",
-    image: "https://placehold.co/400x300?text=Grilled+Cheese",
+    image:
+      "https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese.jpg",
     ingredients: ["Bread slices", "Cheddar cheese", "Butter"],
     steps: [
       "Butter the bread",
@@ -46,7 +48,8 @@ const defaultRecipes = [
   },
   {
     title: "Pancakes",
-    image: "https://placehold.co/400x300?text=Pancakes",
+    image:
+      "https://www.marthastewart.com/thmb/Vgb9cQSlegZz5fcoSbkkqyHPmHY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/338185-basic-pancakes-09-00b18f8418fd4e52bb2050173d083d04.jpg",
     ingredients: ["Flour", "Eggs", "Milk", "Sugar", "Baking Powder"],
     steps: [
       "Mix dry ingredients",
