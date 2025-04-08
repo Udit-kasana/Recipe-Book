@@ -63,11 +63,11 @@ Check out the live demo of this project: [Recipe Book](https://udit-kasana.githu
 
 1. **Home Page**
 
-   ![Home Page Screenshot](images/home.png)
+   ![Home Page Screenshot](images/Home.png)
 
 2. **Recipes Section**
 
-   ![Recipes Section Screenshot](images/Recipes-section.png)
+   ![Recipes Section Screenshot](images/recipes-section.png)
 
    - Navigate to the top-right corner and click on Add to add new Recipes.
 
